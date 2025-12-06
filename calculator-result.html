@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculation Result</title>
+</head>
+<body>
+
+<main>
+    <h1>Calculation Result</h1>
+
+    <section>
+        <h2>Your Calculation:</h2>
+
+        <dl>
+            <dt>First Number:</dt>
+            <dd id="first"></dd>
+
+            <dt>Operation:</dt>
+            <dd id="op"></dd>
+
+            <dt>Second Number:</dt>
+            <dd id="second"></dd>
+
+            <dt>Result:</dt>
+            <dd id="result"></dd>
+        </dl>
+    </section>
+
+    <p><a href="calculator.html">Back to Calculator</a></p>
+    <p><a href="index.html">Back to Homepage</a></p>
+</main>
+
+<script>
+    // Create a URLSearchParams object to easily get query parameters from the URL
+    const p = new URLSearchParams(window.location.search);
+
+    // Get the first number from the URL and convert it to a Number type
+    const n1 = Number(p.get("num1"));
+    // Get the second number from the URL and convert it to a Number type
+    const n2 = Number(p.get("num2"));
+    // Get the operation type from the URL
+    const op = p.get("operation");
+
+    // Display the first number in the element with id "first"
+    document.getElementById("first").textContent = n1;
+    // Display the second number in the element with id "second"
+    document.getElementById("second").textContent = n2;
+    // Display the operation in the element with id "op"
+    document.getElementById("op").textContent = op;
+
+    // Declare a variable to store the calculation result
+    let result;
+
+    // Perform the calculation based on the operation type
+    switch(op){
+        case "add": 
+            result = n1 + n2; // Addition
+            break;
+        case "sub": 
+            result = n1 - n2; // Subtraction
+            break;
+        case "mul": 
+            result = n1 * n2; // Multiplication
+            break;
+        case "div": 
+            // Division with a check to avoid dividing by zero
+            result = n2 !== 0 ? n1 / n2 : "Cannot divide by zero"; 
+            break;
+        case "pow": 
+            result = Math.pow(n1, n2); // Power (n1 raised to n2)
+            break;
+        case "sqrt": 
+            result = Math.sqrt(n1); // Square root of the first number
+            break;
+        case "percent": 
+            result = (n1 / 100) * n2; // Calculate percentage
+            break;
+        default: 
+            result = "Invalid operation"; // If the operation is not recognized
+    }
+
+    // Display the result in the element with id "result"
+    document.getElementById("result").textContent = result;
+</script>
+
+
+</body>
+</html>
+
+

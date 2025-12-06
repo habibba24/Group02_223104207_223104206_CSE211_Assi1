@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive design for all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Page description -->
+    <meta name="description" content="registration page for EduConnect.">
+
+    <!-- SEO: Keywords -->
+    <meta name="keywords" content="education, online learning, courses, EduConnect,registration">
+
+    <!-- Author information -->
+    <meta name="author" content="habiba weal salah">
+
+    <!-- Page title -->
+    <title>registration - EduConnect</title>
+    <style>
+    .spaced-div {
+        margin-bottom: 15px; /* space between divs */
+    }
+</style>
+</head>
+<body>
+<header>
+<nav>
+    <h2>Menu</h2>
+    <ul>
+        <li><a href="../pages/about.html" target="_blank">About us</a></li>
+        <li><a href="../pages/course-catalog.html" target="_blank">Course Catalog</a></li>
+        <li><a href="../pages/course-detail.html" target="_blank">Course Details</a></li>
+        <li><a href="../pages/student-dashboard.html" target="_blank">Student Dashboard</a></li>
+        <li><a href="../pages/registration.html" target="_blank">Registration</a></li>
+        <li><a href="../pages/contact.html" target="_blank">Contact Me</a></li>
+        <li><a href="https://www.gu.edu.eg" target="_blank" rel="noopener noreferrer">Galala Univeristy Website</a></li>
+    </ul>
+</nav>  
+    <!-- Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="../index.html">Home</a> &gt;<a href="../pages/registration.html">Registration</a>
+</nav> 
+</header>
+<main>
+    <h1>Student Registration Form</h1>
+    <form action="../pages/thank.html" method="get" name="registrationForm" id="registrationForm">
+
+        <!-- Section 1: Personal Information -->
+    <section>
+    <h2>Personal Information</h2>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullName" class="required">Full Name  </label>
+            <input type="text" id="fullName" name="fullName" required minlength="3" maxlength="50"
+                placeholder="Enter your full name" title="Please enter your full name (3-50 characters)" autofocus
+            >   
+            <label for="studentID" class="required">Student ID </label>
+            <input type="text" id="studentID" name="studentID" required pattern="\d{9}" placeholder="123456789"
+                title="Enter exactly 9 digits for your student ID"
+            >
+            <label for="email" class="required">Email Address </label>
+            <input type="email" id="email" name="email" required placeholder="student@example.com" autocomplete="email"
+                title="Enter a valid email address"
+            >
+
+            <label for="password" class="required">Password </label>
+            <input type="password" id="password" name="password" required minlength="8" maxlength="20"
+                placeholder="Minimum 8 characters" autocomplete="new-password" 
+                title="Password must be between 8 and 20 characters"
+            >
+
+            <label for="confirmPassword" class="required">Confirm Password </label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required minlength="8" maxlength="20"
+                placeholder="Re-enter your password"
+            >
+
+            <label for="dob" class="required">Date of Birth </label>
+            <input type="date" id="dob" name="dob" required max="2007-12-02" autocomplete="bday"
+                title="You must be at least 18 years old"
+            >
+            <fieldset>
+            <legend class="required">Gender</legend>
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+            </fieldset>
+
+            <label for="profilePhoto">Profile Photo</label>
+            <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" 
+                title="Upload your profile picture (image files only)"
+            >
+        </fieldset>
+        </section>
+        
+
+        <!-- Section 2: Academic Information -->
+    <section>
+    <h2>Academic Information</h2>
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <fieldset>
+                <legend class="required">Current Degree Level</legend>
+                <label><input type="radio" name="degreeLevel" value="Bachelor's Degree" checked required> Bachelor's Degree</label>
+                <label><input type="radio" name="degreeLevel" value="Master's Degree"> Master's Degree</label>
+                <label><input type="radio" name="degreeLevel" value="PhD"> PhD</label>
+            </fieldset>
+
+            <label for="major" class="required">Major/Department</label>
+            <select id="major" name="major" required>
+                <option value="">-- Select Your Major --</option>
+                <optgroup label="Faculty of Engineering">
+                    <option>Computer Science</option>
+                    <option>Information Technology</option>
+                    <option>Software Engineering</option>
+                    <option>Computer Engineering</option>
+                </optgroup>
+                <optgroup label="Faculty of Business">
+                    <option>Marketing</option>
+                    <option>Finance</option>
+                    <option>Management</option>
+                    <option>Accounting</option>
+                </optgroup>
+                <optgroup label="Faculty of Science">
+                    <option>Mathematics</option>
+                    <option>Physics</option>
+                    <option>Biology</option>
+                    <option>Chemistry</option>
+                </optgroup>
+            </select>
+
+            <label for="semester" class="required">Current Semester </label>
+            <input type="number" id="semester" name="semester" required min="1" max="12" placeholder="1-12"
+                title="Enter a semester between 1 and 12"
+            >
+            <label for="gpa">Current GPA</label>
+            <input type="number" id="gpa" name="gpa" min="0" max="4" step="0.01" placeholder="0.00 - 4.00"
+                title="Enter your GPA (0.00 - 4.00)"><span>(optional)</span>
+
+            <fieldset>
+                <legend>Previous Programming Experience</legend>
+                <label><input type="checkbox" name="programmingExperience" value="Python"> Python</label>
+                <label><input type="checkbox" name="programmingExperience" value="Java"> Java</label>
+                <label><input type="checkbox" name="programmingExperience" value="C++"> C++</label>
+                <label><input type="checkbox" name="programmingExperience" value="JavaScript"> JavaScript</label>
+                <label><input type="checkbox" name="programmingExperience" value="PHP"> PHP</label>
+                <label><input type="checkbox" name="programmingExperience" value="C#"> C#</label>
+                <label><input type="checkbox" name="programmingExperience" value="None"> None</label>
+            </fieldset>
+        </fieldset>
+        </section>
+
+        <!-- Section 3: Course Preferences -->
+    <section>
+    <h2>Course Preferences</h2>
+        <fieldset>
+            <legend>Course Preferences</legend>
+            <fieldset>
+                <legend class="required">Preferred Learning Mode</legend>
+                <label><input type="radio" name="learningMode" value="On-Campus" required> On-Campus</label>
+                <label><input type="radio" name="learningMode" value="Online"> Online</label>
+                <label><input type="radio" name="learningMode" value="Hybrid Mixed"> Hybrid Mixed</label>
+            </fieldset>
+            <div class="spaced-div">
+            <label for="courseCategories" class="required">Course Categories of Interest</label>
+            <select id="courseCategories" name="courseCategories" multiple size="5" required title="Select 1-3 categories (Hold Ctrl/Cmd for multiple)">
+                <option>Web Development</option>
+                <option>Mobile Development</option>
+                <option>Data Science</option>
+                <option>Artificial Intelligence</option>
+                <option>Cybersecurity</option>
+                <option>Game Development</option>
+                <option>Cloud Computing</option>
+                <option>Database Management</option>
+                <option>DevOps</option>
+                <option>Blockchain Technology</option>
+            </select>
+            <span class="help-text" style="display:inline-block;  color:#666; ">Select 1-3 categories (Hold Ctrl/Cmd for multiple)</span>
+            </div>
+            <div class="spaced-div">
+            <label for="schedule" class="required">Preferred Class Schedule</label>
+            <select id="schedule" name="schedule" required>
+                <option value="">- Select Schedule --</option>
+                <option>Morning 8:00 AM - 12:00 PM</option>
+                <option>Afternoon 12:00 PM - 4:00 PM</option>
+                <option>Evening 4:00 PM - 8:00 PM</option>
+                <option>Weekend Saturday & Sunday</option>
+            </select>
+            </div>
+
+            <div class="spaced-div">
+            <label for="primaryCourse" class="required">Primary Course Selection</label>
+            <select id="primaryCourse" name="primaryCourse" required>
+                <option value="">-- Select Primary Course --</option>
+                <optgroup label="Web Development">
+                    <option>HTML & CSS Fundamentals</option>
+                    <option>Advanced JavaScript</option>
+                    <option>React.js Development</option>
+                    <option>Node.js & Backend</option>
+                </optgroup>
+                <optgroup label="Mobile Development">
+                    <option>Android Development</option>
+                    <option>iOS Development</option>
+                    <option>Flutter Cross-Platform</option>
+                </optgroup>
+                <optgroup label="Data & AI">
+                    <option>Python for Data Science</option>
+                    <option>Machine Learning</option>
+                    <option>Deep Learning</option>
+                </optgroup>
+            </select>
+            </div>
+
+            <label for="alternativeCourses">Alternative Courses</label>
+            <select id="alternativeCourses" name="alternativeCourses" multiple size="4"
+                title="Select up to 3 alternative courses">
+                <option>SQL & Databases</option>
+                <option>Git & Version Control</option>
+                <option>Docker & Containers</option>
+                <option>AWS Cloud Basics</option>
+                <option>Web Security</option>
+                <option>Software Testing</option>
+            </select>
+        </fieldset>
+        </section>
+
+        <!-- Section 4: Additional Information -->
+    <section>
+    <h2>Additional Information</h2>
+        <fieldset>
+            <legend>Additional Information</legend>
+            <div class="spaced-div">
+            <label for="referral">How did you hear about us?</label>
+            <select id="referral" name="referral">
+                <option value="">- Please Select -</option>
+                <option>Search Engine (Google, Bing)</option>
+                <option>Social Media</option>
+                <option>Friend or Colleague</option>
+                <option>University Announcement</option>
+                <option>Online Advertisement</option>
+                <option>Other</option>
+            </select>
+            </div>
+            <div class="spaced-div">
+
+            <label for="specialRequirements">Special Requirements or Accessibility Needs</label>
+            <textarea id="specialRequirements" name="specialRequirements" rows="4" cols="50" maxlength="500" placeholder="Specify any special requirements or accessibility needs" title="Maximum 500 characters"></textarea>
+            <div id="charCount">0 / 500 characters</div>
+            <!--script to display character count-->
+            <script>
+            // Get textarea and counter elements
+            const textarea = document.getElementById('specialRequirements');
+            const counter = document.getElementById('charCount');
+
+            // Listen for input events on the textarea
+            textarea.addEventListener('input', () => {
+                const currentLength = textarea.value.length; // current character count
+                counter.textContent = `${currentLength} / 500 characters`; // update display
+            });
+            </script>
+            </div>
+            <div class="spaced-div">
+
+            <label for="learningGoals">Your Learning Goals and Expectations</label>
+            <textarea id="learningGoals" name="learningGoals" rows="5" cols="50" maxlength="500"
+                placeholder="Describe your learning goals and expectations"></textarea>
+            </div>
+        </fieldset>
+        </section>
+
+        <!-- Section 5: Terms and Conditions -->
+    <section>
+    <h2>Terms and Conditions</h2>
+        <fieldset>
+            <legend>Terms and Conditions</legend>
+
+            <label><input type="checkbox" name="terms" required> I agree to the <a href="#">Terms and Conditions</a></label><br>
+            <label><input type="checkbox" name="privacy" required> I have read and accept the <a href="#">Privacy Policy</a></label><br>
+            <label><input type="checkbox" name="newsletter"> Subscribe to our newsletter for course updates and special offers</label><br>
+            <label><input type="checkbox" name="marketing"> I agree to receive marketing communications via email</label>
+        </fieldset>
+        </section>
+
+        <!-- Hidden fields -->
+        <input type="hidden" name="formVersion" value="1.0">
+        <input type="hidden" name="submissionDate" id="submissionDate">
+        <input type="hidden" name="userAgent" id="userAgent" >
+
+        <!-- Form Controls -->
+        <div class="form-buttons">
+            <button type="submit" name="submitBtn" id="submitBtn">Register Now</button>
+            <button type="reset" name="resetBtn" id="resetBtn" title="Clear all form fields">Clear Form</button>
+            <button type="button" name="saveDraftBtn" id="saveDraftBtn">Save Draft</button>
+        </div>
+    </form>  
+</main>
+<footer>
+    <hr>
+    <a href="mailto:hws400427@gu.edu.eg">contact me</a> 
+    <a href="#">linkedin</a>
+    <a href="#">facebook</a>
+    <a href="#">twitter</a>
+    <p>&copy; 2025 EduConnect. All rights reserved.</p>
+    <a href="pages/about.html" target="_blank">About us</a>
+</footer>
+</body>
+</html>

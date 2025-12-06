@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+
+<main>
+    <h1>Scientific Calculator</h1>
+
+    <form action="calculator-result.html" method="get">
+
+        <!-- NUMBER INPUTS -->
+        <fieldset>
+            <legend>Input Numbers</legend>
+
+            <label for="num1">First Number:</label>
+            <input type="number" id="num1" name="num1" >
+            <br><br>
+
+            <label for="num2">Second Number:</label>
+            <input type="number" id="num2" name="num2" >
+        </fieldset>
+
+        <br>
+
+        <!-- OPERATIONS -->
+        <fieldset>
+            <legend>Operations</legend>
+
+            <!-- Basic -->
+            <label><input type="radio" name="operation" value="add" required> Add</label><br>
+            <label><input type="radio" name="operation" value="sub"> Subtract</label><br>
+            <label><input type="radio" name="operation" value="mul"> Multiply</label><br>
+            <label><input type="radio" name="operation" value="div"> Divide</label><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Advanced Operations</legend>
+
+            <!-- Advanced -->
+            <label><input type="radio" name="operation" value="pow"> Power</label><br>
+            <label><input type="radio" name="operation" value="sqrt"> Square Root</label><br>
+            <label><input type="radio" name="operation" value="percent"> Percentage</label>
+        </fieldset>
+
+        <br>
+
+        <!-- DISPLAY AREA (readonly input) -->
+        <label>Display:</label>
+        <input type="text" readonly value="The result will appear on the next page">
+        <br><br>
+
+        <!-- MEMORY SECTION -->
+        <fieldset>
+            <legend>Memory</legend>
+
+            <!-- Hidden fields for memory (required by assignment) -->
+            <input type="hidden" name="memoryValue" value="">
+            <input type="hidden" name="lastResult" value="">
+
+            <button type="submit" name="mem" value="store">Store</button>
+            <button type="submit" name="mem" value="recall">Recall</button>
+            <button type="submit" name="mem" value="clear">Clear</button>
+        </fieldset>
+
+        <br>
+
+       
+        <!-- CONTROL BUTTONS -->
+        <button type="reset">Clear All</button>
+        <button type="submit">Calculate</button>
+
+    </form>
+
+    <br>
+
+    <!-- HISTORY SECTION -->
+    <fieldset>
+        <legend>Calculation History</legend>
+        <ol>
+            <li>no previous calculations</li>
+        </ol>
+    </fieldset>
+
+</main>
+
+</body>
+</html>

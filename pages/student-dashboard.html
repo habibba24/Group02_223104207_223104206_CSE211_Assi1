@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive design for all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Page description -->
+    <meta name="description" content="student-dashboard page for EduConnect.">
+
+    <!-- SEO: Keywords -->
+    <meta name="keywords" content="education, online learning, courses, EduConnect, student dashboard">
+
+    <!-- Author information -->
+    <meta name="author" content="habiba weal salah">
+
+    <!-- Page title -->
+    <title>mainpage - EduConnect</title>
+    <style>
+    table {
+        border-collapse: collapse;
+        border: 1px solid #333;
+    }
+    table th, table td {
+        border: 1px solid #333;
+        padding: 8px;
+    }
+    </style>
+</head>
+<body>
+<header>
+<h1>Welcome Student</h1>
+<img src="../images/profile/Unknown-15" alt="profile picture" width="200" height="200">
+<dl>
+    <dt>total courses:</dt>
+    <dd>7</dd>
+    <dt>completed courses:</dt>
+    <dd>5</dd>
+    <dt>inprogress courses:</dt>
+    <dd>2</dd>
+    <dt>Certificates:</dt>
+    <dd>3</dd>
+</dl>
+
+<nav>
+    <h2>Menu</h2>
+    <ul>
+        <li><a href="../pages/about.html" target="_blank">About us</a></li>
+        <li><a href="../pages/course-catalog.html" target="_blank">Course Catalog</a></li>
+        <li><a href="../pages/course-detail.html" target="_blank">Course Details</a></li>
+        <li><a href="../pages/student-dashboard.html" target="_blank">Student Dashboard</a></li>
+        <li><a href="../pages/registration.html" target="_blank">Registration</a></li>
+        <li><a href="../pages/contact.html" target="_blank">Contact Me</a></li>
+        <li><a href="https://www.gu.edu.eg" target="_blank" rel="noopener noreferrer">Galala Univeristy Website</a></li>
+    </ul>
+</nav> 
+    <!-- Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="../index.html">Home</a> &gt;<a href="../pages/student-dashboard.html">Student Dashboard</a>
+</nav> 
+</header>
+<main>
+
+    <section id="enrolled-courses">
+        <h2>Enrolled Courses</h2>
+        <ul>
+            <li>
+                <article>
+                    <img src="../images/courses/data-structure" alt="Data Structures" width="160" height="100">
+                    <h3>Data Structures</h3>
+                    <h4>Instructor: Prof. Shaker</h4>
+                    <label for="courseProgress">Course completion:</label>
+                    <progress id="courseProgress" value="62" max="100">62%</progress>
+                    <span id="courseProgressText">62%</span>
+                    <time datetime="2025-12-31">Last Accessed: Dec 31, 2025</time>
+                    <a href="#">Continue Learning</a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <img src="../images/courses/machine-learning" alt="machine learning" width="160" height="100">
+                    <h3>Machine Learning</h3>
+                    <h4>Instructor: Dr. Ahmed</h4>
+                    <label for="courseProgress2">Course completion:</label>
+                    <progress id="courseProgress2" value="85" max="100">85%</progress>
+                    <span id="courseProgressText2">85%</span>
+                    <time datetime="2025-11-15">Last Accessed: Nov 15, 2025</time>
+                    <a href="#">Continue Learning</a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <img src="../images/courses/web" alt="Web Programming" width="160" height="100">
+                    <h3>Web Programming</h3>
+                    <h4>Instructor: Prof. Samy Ghoniemy</h4>
+                    <label for="courseProgress3">Course completion:</label>
+                    <progress id="courseProgress3" value="100" max="100">100%</progress>
+                    <span id="courseProgressText3">90%</span>
+                    <time datetime="2025-10-20">Last Accessed: Oct 20, 2025</time>
+                    <a href="#">Continue Learning</a>
+                </article>
+            </li>
+        </ul>
+    </section>
+    <table>
+        <caption><strong>Calendar</strong></caption>
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+    <div>
+        <section id="progress-statistics">
+            <h2>Overall Progress Statistics</h2>
+            <dl>
+                <dt>Courses Completed</dt>
+                <dd>5</dd>
+                <dt>Courses in Progress</dt>
+                <dd>2</dd>
+                <dt>Total Learning Hours</dt>
+                <dd>45 hours</dd>
+                <dt>Total Certificates Earned</dt>
+                <dd>3</dd>
+                <dt>Average Course Score</dt>
+                <dd>90%</dd>
+                <dt>Current Streak</dt>
+                <dd>5 days</dd>
+            </dl>
+        </section>
+    </div>
+    <div>
+    <section id="upcoming-deadlines">
+        <h2>Upcoming Deadlines</h2>
+        <ol>
+            <li>
+                <time datetime="2025-12-15">Dec 15, 2025</time>
+                <span>Project Submission: Data Structures</span>
+                <p><strong>Priority:</strong> High</p>
+
+            </li>
+            <li>
+                <time datetime="2025-11-30">Nov 30, 2025</time>
+                <span>Assignment Due: Machine Learning</span>
+                <p><strong>Priority:</strong>Medium</p>
+
+            </li>
+            <li>
+                <time datetime="2025-10-25">Oct 25, 2025 at 9:00 PM</time>
+                <span>Quiz: Web Programming</span>
+                <p><strong>Priority:</strong>Low</p>
+
+            </li>
+        </ol>
+    </section>
+    </div>
+    <div>        
+    <section id="recent-activity">
+        <h2>Recent Activity</h2>
+        <ul>
+            <li>
+                <time datetime="2025-10-20T14:30">Oct 20, 2025, 2:30 PM</time>
+                <span>Completed Module 5: Advanced JavaScript</span>
+            </li>
+            <li>
+                <time datetime="2025-10-18T10:00">Oct 18, 2025, 10:00 AM</time>
+                <span>Participated in Discussion: Machine Learning Ethics</span>
+            </li>
+            <li>
+                <time datetime="2025-10-15T16:45">Oct 15, 2025, 4:45 PM</time>
+                <span>Submitted Assignment: HTML & CSS Basics</span>
+            </li>
+        </ul>
+
+    </section>
+    </div>
+    <aside>
+    <section>
+        <h4>Achievements</h4>
+        <ul>
+            <li><img src="../images/profile/images-3.png" alt="Achievement Icon"  width="100">Completed 5 courses</li>
+            <li><img src="../images/profile/Unknown-18" alt="Achievement Icon"  width="100">Earned 3 certificates</li>
+            <li><img src="../images/profile/Unknown-20" alt="Achievement Icon"  width="100">Maintained a 90% average score</li>
+        </ul>
+    </section>
+    <section>
+        <h4>Learning goals <progress value="70" max="100"></progress></h4>
+        <ul>
+            <li>Master advanced machine learning techniques</li>
+            <li>Build a portfolio of data science projects</li>
+            <li>Improve public speaking and presentation skills</li>
+        </ul>
+    </section>
+    <section>
+        <h4>Recommended Courses</h4>
+        <ul>
+            <li><a href="#">Introduction to AI</a></li>
+            <li><a href="#">Advanced CSS Techniques</a></li>
+            <li><a href="#">Data Science with Python</a></li>
+        </ul>
+    </section>
+    </aside>
+</div>
+</main>
+<footer>
+    <hr>
+    <a href="mailto:hws400427@gu.edu.eg">contact me</a> 
+    <a href="#">linkedin</a>
+    <a href="#">facebook</a>
+    <a href="#">twitter</a>
+    <p>&copy; 2025 EduConnect. All rights reserved.</p>
+    <a href="../pages/about.html" target="_blank">About us</a>
+
+</footer>
+</body>
+</html>

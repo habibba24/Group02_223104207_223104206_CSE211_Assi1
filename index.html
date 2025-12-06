@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive design for all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Page description -->
+    <meta name="description" content="my web project.">
+
+    <!-- SEO: Keywords -->
+    <meta name="keywords" content="education, online learning, courses, EduConnect">
+
+    <!-- Author information -->
+    <meta name="author" content="habiba weal salah">
+
+    <!-- Page title -->
+    <title>mainpage - EduConnect</title>
+    <style>
+        /* ----- Layout ----- */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            padding: 20px;
+        }
+
+        
+
+        /* Two-column layout */
+        .container {
+            display: flex;
+        }
+
+        .main-content {
+            width: 70%;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 30%;
+            background: #fafafa;
+            padding: 20px;
+            border-left: 1px solid #ddd;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .news-scroll {
+            background: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow: hidden;
+        }
+
+        .news-scroll p {
+            animation: scroll 15s linear infinite;
+            margin: 0;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1> Welcome to my web project</h1>     <!-- site title -->
+    <h2><u>Ideas Brought to Life</u></h2> <!-- tangline -->
+  
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="pages/about.html" target="_blank">About us</a></li>
+            <li><a href="pages/course-catalog.html" target="_blank">Course Catalog</a></li>
+            <li><a href="pages/course-detail.html" target="_blank">Course Details</a></li>
+            <li><a href="pages/student-dashboard.html" target="_blank">Student Dashboard</a></li>
+            <li><a href="pages/registration.html" target="_blank">Registration</a></li>
+            <li><a href="pages/contact.html" target="_blank">Contact Me</a></li>
+            <li><a href="https://www.gu.edu.eg" target="_blank" rel="noopener noreferrer">Galala Univeristy Website</a></li>
+        </ul>
+    </nav> 
+      <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="index.html">Home</a> &gt;
+    </nav> 
+</header>
+<hr>
+<main class="container">
+    <div class="main-content">
+        <section>
+            <h2>our featured  Courses</h2>
+            <article>
+                <h3>1-Web programming</h3>
+                <figure>
+                    <img src="images/courses/web" alt="web Programming" width="300" height="200">
+                    <figcaption>Web programming - very useful to learn html and css and js</figcaption>
+                </figure>
+            </article>
+            <article>
+                <h3>2-Machine Learning</h3>
+                <figure>
+                    <img src="images/courses/machine-learning" alt="machine learning" width="300" height="200">
+                    <figcaption>Machine Learning - learn one of the most important basis on ai</figcaption>
+                </figure>
+            </article>
+            <article>
+                <h3>3-Data structure</h3>
+                <figure>
+                    <img src="images/courses/data-structure" alt="data structure" width="300" height="200">
+                    <figcaption>Data structure - learn the structure of how data work</figcaption>
+                </figure>
+            </article>
+            <article>
+                <h3>4-Security of information</h3>
+                <figure>
+                    <img src="images/courses/security" alt="security of information" width="300" height="200">
+                    <figcaption>Security of information - Understand threats, risks, and protection strategies</figcaption>
+                </figure>
+            </article>
+        </section>
+        <section>
+            <h2>Latest announcements</h2>
+            <ul>
+                <li>New Courses Added!</li>
+                <li>We've added new AI and Cloud Computing courses</li>
+                <li>Exam Schedule Released</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Platform Statistics</h2>
+                <dl>
+                    <dt>Total Students:</dt>
+                    <dd>12,450</dd>
+
+                    <dt>Available Courses:</dt>
+                    <dd>230+</dd>
+
+                    <dt>Active Instructors:</dt>
+                    <dd>85</dd>
+                </dl>
+        </section>
+    </div>
+
+    <!-- RIGHT COLUMN (30%) -->
+    <aside class="sidebar">
+
+        <!-- Search Form -->
+        <h3>Search</h3>
+        <form>
+            <input type="text" placeholder="Search courses..." required>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Quick Navigation Links -->
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="pages/course-catalog.html">Browse All Courses</a></li>
+            <li><a href="pages/student-dashboard.html">Your Dashboard</a></li>
+            <li><a href="pages/registration.html">Register Now</a></li>
+        </ul>
+        <h3>Latest News</h3>
+        <div class="news-scroll">
+            <p>Enrollment for Spring 2025 is now open! | New scholarships announced! | Check out our new AI courses!</p>
+        </div>
+        
+
+        <!-- Advertisement Section -->
+        <div>
+            <h3>Advertisement</h3>
+            <p>Enroll now and get 20% off your first course!</p>
+        </div>
+    </aside>
+</main>
+<footer>
+    <hr>
+    <a href="mailto:hws400427@gu.edu.eg">contact me</a> 
+    <a href="#">linkedin</a>
+    <a href="#">facebook</a>
+    <a href="#">twitter</a>
+    <p>&copy; 2025 EduConnect. All rights reserved.</p>
+    <a href="pages/about.html" target="_blank">About us</a>
+
+</footer>
+
+</body>
+</html> 

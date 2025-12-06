@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive design for all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Page description -->
+    <meta name="description" content="course-catalog page for EduConnect.">
+
+    <!-- SEO: Keywords -->
+    <meta name="keywords" content="education, online learning, courses, EduConnect, course catalog">
+
+    <!-- Author information -->
+    <meta name="author" content="habiba weal salah">
+
+    <!-- Page title -->
+    <title>mainpage - EduConnect</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid #333;
+        }
+        table th, table td {
+            border: 1px solid #333;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+<h1>Course Catalog</h1>
+<nav>
+    <h2>Menu</h2>
+    <ul>
+        <li><a href="../pages/about.html" target="_blank">About us</a></li>
+        <li><a href="../pages/course-catalog.html" target="_blank">Course Catalog</a></li>
+        <li><a href="../pages/course-detail.html" target="_blank">Course Details</a></li>
+        <li><a href="../pages/student-dashboard.html" target="_blank">Student Dashboard</a></li>
+        <li><a href="../pages/registration.html" target="_blank">Registration</a></li>
+        <li><a href="../pages/contact.html" target="_blank">Contact Me</a></li>
+        <li><a href="https://www.gu.edu.eg" target="_blank" rel="noopener noreferrer">Galala Univeristy Website</a></li>
+    </ul>
+</nav> 
+    <!-- Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="../index.html">Home</a> &gt;<a href="../pages/course-catalog.html">Course Catalog</a>
+</nav> 
+</header>
+
+<main>
+
+<aside style="width:20%; float:left;">
+    <h2>Filters</h2>
+
+    <form>
+        <fieldset>
+            <legend>Category</legend>
+            <label><input type="checkbox" name="category" value="web"> Web programing</label><br>
+            <label><input type="checkbox" name="category" value="data"> data base</label><br>
+            <label><input type="checkbox" name="category" value="ai"> AI</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Level</legend>
+            <label><input type="radio" name="level" value="beginner"> Beginner</label><br>
+            <label><input type="radio" name="level" value="intermediate"> Intermediate</label><br>
+            <label><input type="radio" name="level" value="advanced"> Advanced</label>
+        </fieldset>
+
+        <label for="duration">Duration:</label>
+        <select id="duration" name="duration">
+            <option value="">Any</option>
+            <option value="short">Less than 2 weeks</option>
+            <option value="medium">2-6 weeks</option>
+            <option value="long">6+ weeks</option>
+        </select>
+
+        <label for="rating">Rating:</label>
+        <input type="range" id="rating" name="rating" min="1" max="5">
+
+        <br><br>
+        <button type="submit">Apply Filters</button>
+    </form>
+</aside>
+
+<section style="width:75%; float:right;">
+    <h2>Available Courses</h2>
+
+    <div>
+        <form>
+            <input type="text" placeholder="Search courses...">
+            <button type="submit">Search</button>
+        </form>
+
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+            <option value="popularity">Popularity</option>
+            <option value="price">Price</option>
+            <option value="rating">Rating</option>
+            <option value="newest">Newest</option>
+        </select>
+
+        <p>Showing 6 courses</p>
+    </div>
+
+    <article>
+        <figure>
+            <img src="../images/courses/web" alt="Course 1">
+            <figcaption>Web Programming</figcaption>
+        </figure>
+        <h3>Web Programming</h3>
+        <p>Learn the fundamentals of HTML, CSS, and JavaScript.</p>
+        <p>Instructor: prof.samy ghoniemy</p>
+        <dl>
+            <dt>Duration</dt><dd>7 weeks</dd>
+            <dt>Level</dt><dd>advanced</dd>
+            <dt>Price</dt><dd>$200</dd>
+        </dl>
+        <p>Rating: ★★★★☆</p>
+        <ul>
+            <li>Hands-on projects</li>
+            <li>Certificate of completion</li>
+            <li>Access to community forum</li>
+        </ul>
+        <a href="course-detail.html">View Details</a>
+    </article>
+
+
+    <article>
+        <figure>
+            <img src="../images/courses/database.jpeg" alt="Course 2">
+            <figcaption>Database</figcaption>
+        </figure>
+        <h3>Database</h3>
+        <p>Understand SQL basics and relational database concepts.</p>
+        <p>Instructor: Dr.shaker</p>
+        <dl>
+            <dt>Duration</dt><dd>6 weeks</dd>
+            <dt>Level</dt><dd>Intermediate</dd>
+            <dt>Price</dt><dd>$150</dd>
+        </dl>
+        <p>Rating: ★★★★★</p>
+        <ul>
+            <li>SQL practice</li>
+            <li>ERD diagrams</li>
+            <li>Real DB systems</li>
+        </ul>
+        <a href="course-detail.html">View Details</a>
+    </article>
+
+    <article>
+        <figure>
+            <img src="../images/courses/security" alt="Course 3">
+            <figcaption>cyper Security</figcaption>
+        </figure>
+        <h3>cyper security</h3>
+        <p>Deep dive into indexing, transactions, and NoSQL.</p>
+        <p>Instructor:dr.tamer</p>
+        <dl>
+            <dt>Duration</dt><dd>8 weeks</dd>
+            <dt>Level</dt><dd>Advanced</dd>
+            <dt>Price</dt><dd>$220</dd>
+        </dl>
+        <p>Rating: ★★★★★</p>
+        <ul>
+            <li>Query optimization</li>
+            <li>NoSQL introduction</li>
+            <li>Case studies</li>
+        </ul>
+        <a href="course-detail.html">View Details</a>
+    </article>
+
+    <article>
+        <figure>
+            <img src="../images/courses/ai.jpeg" alt="Course 4">
+            <figcaption>AI</figcaption>
+        </figure>
+        <h3> AI</h3>
+        <p>Learn search algorithms and basic machine learning.</p>
+        <p>Instructor: Dr.mohamed</p>
+        <dl>
+            <dt>Duration</dt><dd>5 weeks</dd>
+            <dt>Level</dt><dd>Beginner</dd>
+            <dt>Price</dt><dd>$180</dd>
+        </dl>
+        <p>Rating: ★★★★☆</p>
+        <ul>
+            <li>AI basics</li>
+            <li>Mini projects</li>
+            <li>ML overview</li>
+        </ul>
+        <a href="course-detail.html">View Details</a>
+    </article>
+
+    <article>
+        <figure>
+            <img src="../images/courses/operatingsystem.jpeg" alt="Course 5">
+            <figcaption>operating system</figcaption>
+        </figure>
+        <h3>operating system</h3>
+        <p>Understand threats, attacks, and secure system design.</p>
+        <p>Instructor: Dr.amr hefny</p>
+        <dl>
+            <dt>Duration</dt><dd>4 weeks</dd>
+            <dt>Level</dt><dd>Beginner</dd>
+            <dt>Price</dt><dd>$120</dd>
+        </dl>
+        <p>Rating: ★★★★☆</p>
+        <ul>
+            <li>os basics</li>
+            <li>Real attack demos</li>
+            <li>System hardening</li>
+        </ul>
+        <a href="course-detail.html">View Details</a>
+    </article>
+
+    <article>
+        <figure>
+            <img src="../images/courses/machine-learning" alt="Course 6">
+            <figcaption>Machine Learning</figcaption>
+        </figure>
+        <h3>Machine Learning</h3>
+        <p>Build ML models using Python.</p>
+        <p>Instructor: Prof. Mohamed Samir</p>
+        <dl>
+            <dt>Duration</dt><dd>6 weeks</dd>
+            <dt>Level</dt><dd>Intermediate</dd>
+            <dt>Price</dt><dd>$250</dd>
+        </dl>
+        <p>Rating: ★★★★☆</p>
+        <ul>
+            <li>Supervised learning</li>
+            <li>Datasets included</li>
+            <li>Model evaluation</li>
+        </ul>
+        <a href="course-detail.html">View Details</a>
+    </article>
+
+</section>
+
+<div style="clear:both;"></div>
+
+<table>
+    <caption>Course Comparison</caption>
+    <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Price</th>
+            <th>Duration</th>
+            <th>Level</th>
+            <th>Rating</th>
+            <th>Enrollment</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Web Programming</td>
+            <td>$200</td>
+            <td>7 weeks</td>
+            <td>advanced</td>
+            <td>★★★★☆</td>
+            <td>120</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">data base</td>
+            <td>$150</td>
+            <td>6 weeks</td>
+            <td>Intermediate</td>
+            <td>★★★★★</td>
+            <td>90</td>
+        </tr>
+
+        <tr>
+            <td>$220</td>
+            <td>8 weeks</td>
+            <td>Advanced</td>
+            <td>★★★★★</td>
+            <td>50</td>
+        </tr>
+
+        <tr>
+    <td>machine learning</td>
+    <td>$200</td>
+    <td>7 weeks</td>
+    <td>Advanced</td>
+    <td>★★★★☆</td>
+    <td>120</td>
+</tr>
+
+<tr>
+    <td rowspan="2">operating system</td>
+    <td>$150</td>
+    <td>6 weeks</td>
+    <td>Intermediate</td>
+    <td>★★★★★</td>
+    <td>90</td>
+</tr>
+<tr>
+    <td>$220</td>
+    <td>8 weeks</td>
+    <td>Advanced</td>
+    <td>★★★★★</td>
+    <td>50</td>
+</tr>
+
+<tr>
+    <td>cyper security</td>
+    <td>$180</td>
+    <td>5 weeks</td>
+    <td>Beginner</td>
+    <td>★★★★☆</td>
+    <td>75</td>
+</tr>
+
+        <tr>
+            <td>AI</td>
+            <td>$180</td>
+            <td>5 weeks</td>
+            <td>Beginner</td>
+            <td>★★★★☆</td>
+            <td>75</td>
+        </tr>
+    </tbody>
+</table>
+
+</main>
+<footer>
+    <hr>
+    <a href="mailto:hws400427@gu.edu.eg">contact me</a> 
+    <a href="#">linkedin</a>
+    <a href="#">facebook</a>
+    <a href="#">twitter</a>
+    <p>&copy; 2025 EduConnect. All rights reserved.</p>
+    <a href="pages/about.html" target="_blank">About us</a>
+</footer>
+
+</body>
+</html>
+
